@@ -1,0 +1,476 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&family=Open+Sans:wght@400;700&family=Poppins&family=Roboto&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+}
+
+body {
+    display: flex;
+    flex-direction: column;  /* Para empilhar os elementos na vertical */
+    height: 100vh;  /* Garantir que a altura total seja 100% da altura da janela */
+}
+
+
+.reveal{
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: all 1s ease;
+}
+
+.reveal.active{
+    transform: translateY(0px);
+    opacity: 1;
+}
+
+section{
+    position: relative;
+    width: 100%;
+    padding: 95px;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.banner{
+    width: 100%;
+    height: 2120px;
+    background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)), url(/img/azul.jpeg);
+    background-size: cover;
+    background-position: center;                            /* CABEÇALHO */
+}
+
+.navbar{
+    width: 85%;
+    margin: auto;
+    padding: 35px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo{
+    width: 60px;
+}
+
+.navbar ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+}
+
+.navbar ul li a{
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.navbar ul li::after{
+    content: '';
+    height: 3px;
+    width: 0;
+    background: #262698;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+
+.navbar ul li:hover::after{
+    width: 100%;
+}                                                           /* FIM CABEÇALHO */
+
+
+/* ===============
+       SOBRE
+   ===============
+*/
+
+
+
+
+.section{
+    width: 100%;
+}
+
+.section .container{
+    width: 80%;
+    display: block;
+    margin: 0px auto;
+    padding: 50px 0px;
+}
+
+.container .title{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.container .title h1{
+    font-size: 55px;
+    color: #262698;
+}
+
+.container .title h1::after{
+    content: '';
+    height: 5px;
+    width: 150px;
+    background-color: #1f1f97;
+    border-radius: 25px;
+    display: block;
+    margin: auto;
+}
+
+.content{
+    float: left;
+    width: 55%;
+}
+
+.image-section{
+    width: 1500px;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: -55px;
+    float: right;
+    width: 45%;
+}
+
+.image-section img{
+    width: 450px;
+    margin-top: 40px;
+    border-radius: 50px;
+}
+
+.content .article p{
+    margin-top: 30px;
+    font-size: 23px;
+    line-height: 1.5;
+    color: #8f9296;
+}
+
+.content .article .button{
+    margin-top: 50px;
+}
+
+.content .article .button a{
+    text-decoration: none;
+    padding: 8px 25px;
+    background-color: #3e3ec4;
+    border-radius: 40px;
+    color: #ffffff;
+    font-size: 18px;
+    letter-spacing: 1.5px;
+    transition-property: all;
+    transition-duration: 0.4s;
+    transition-timing-function: ease;
+}
+
+.content .article .button a:hover{
+    color: #ffffff;
+    border-radius: 15px;
+    padding: 15px 35px;
+    background-color: #1f1f97;
+    transition: 1s ease;
+}
+
+/* ===============
+     FIM SOBRE
+   ===============
+*/
+
+/* =============== 
+       NOSSA EQUIPE
+   =============== */
+
+   .our_team_section {
+    width: 100%;
+    padding: 95px 0; /* Mesma largura do "Sobre" */
+    background-size: cover; /* Certifica que a imagem de fundo cubra a seção */
+    background-position: center; /* Centraliza a imagem de fundo */
+}
+
+.our_team_section .container {
+    width: 80%;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.our_team_section .title {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.our_team_section .title h1 {
+    font-size: 55px;
+    color: #262698;
+}
+
+.our_team_section .title h1::after {
+    content: '';
+    height: 5px;
+    width: 150px;
+    background-color: #1f1f97;
+    border-radius: 25px;
+    display: block;
+    margin: auto;
+}
+
+.our_team {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px; /* Espaçamento entre os membros da equipe */
+}
+
+.our_team .team_member {
+    width: 300px;
+    height: 390px;
+    background: #14296e91;
+    padding: 20px;
+    border-radius: 10px; /* Mais arredondado para combinar com o "Sobre" */
+    text-align: center;
+}
+
+.our_team .team_member .member_img {
+    background: #e9e5fa;  
+    width: 190px;
+    height: 190px;
+    margin: 0 auto;
+    border-radius: 50%;
+    padding: 10px;
+    position: relative;
+    cursor: pointer;
+}
+
+.our_team .team_member .member_img img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.our_team .team_member h3 {
+    font-size: 21px;
+    color: #fff;
+    text-transform: uppercase;
+    margin: 20px 0 10px;
+    letter-spacing: 1px;
+}
+
+.our_team .team_member span {
+    font-size: 13px;
+    color: #fff;
+    letter-spacing: 0.7px;
+}
+
+.our_team .team_member .social_media {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    background: rgba(0, 0, 0, 0.65);
+    width: 95%;
+    height: 95%;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: scale(0);
+    transition: all 0.5s ease;
+}
+
+.our_team .team_member .social_media .item {
+    margin: 0 10px;
+}
+
+.our_team .team_member .social_media .fa {
+    color: #8c7ae6;
+    font-size: 20px;
+}
+
+.our_team .team_member .member_img:hover .social_media {
+    transform: scale(1);
+}
+
+.our_team .team_member .social_media .fa:hover {
+    color: #fff;
+}
+
+
+/* Fim Nossa Equipe */
+
+
+
+/* ===============
+       FOOTER
+   ===============
+*/
+
+#bg{
+    background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)), url(/img/azul.jpeg);
+    background-size: cover;
+    background-position: center;
+}
+
+.footer-sec{
+    padding: 0;
+    margin: 0;
+    background-color: #0c0629;
+}
+
+footer {
+    bottom: 0;
+    top: 0;
+}
+
+
+.footer-distributed {
+    background-color: #0c0629;
+    box-sizing: border-box;
+    width: 100%;
+    text-align: left;
+    font: bold 16px sans-serif;
+    padding: 50px 50px 60px 30px;
+}
+
+.footer-distributed .footer-left, .footer-distributed .footer-center, .footer-distributed .footer-right {
+    display: inline-block;
+    vertical-align: top;
+}
+
+/* Footer left */
+
+.footer-distributed .footer-left {
+    width: 30%;
+}
+
+.footer-distributed h3 {
+    color: #ffffff;
+    font: normal 36px;
+    margin: 0;
+}
+
+
+.footer-distributed h3 span {
+    color: #3e3ec4;
+}
+
+/* Footer links */
+
+.footer-distributed .footer-links {
+    color: #ffffff;
+    margin: 20px 0 12px;
+}
+
+.footer-distributed .footer-links a {
+    display: inline-block;
+    line-height: 1.8;
+    text-decoration: none;
+    color: inherit;
+}
+
+.footer-distributed .footer-company-name {
+    color: #8f9296;
+    font-size: 14px;
+    font-weight: normal;
+    margin: 0;
+}
+
+/* Footer Center */
+
+.footer-distributed .footer-center {
+    width: 35%;
+}
+
+.footer-distributed .footer-center i {
+    background-color: #3e3ec4;
+    color: #ffffff;
+    font-size: 25px;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 42px;
+    margin: 10px 15px;
+    vertical-align: middle;
+}
+
+.footer-distributed .footer-center i.fa-envelope {
+    font-size: 17px;
+    line-height: 38px;
+}
+
+.footer-distributed .footer-center p {
+    display: inline-block;
+    color: #ffffff;
+    vertical-align: middle;
+    margin: 0;
+}
+
+.footer-distributed .footer-center p span {
+    display: block;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 2;
+}
+
+.footer-distributed .footer-center p a {
+    color: #3e3ec4;
+    text-decoration: none;
+}
+
+/* Footer Right */
+
+.footer-distributed .footer-right {
+    width: 30%;
+}
+
+.footer-distributed .footer-company-about {
+    line-height: 20px;
+    color: #92999f;
+    font-size: 13px;
+    font-weight: normal;
+    margin: 0;
+}
+
+.footer-distributed .footer-company-about span {
+    display: block;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.footer-distributed .footer-icons {
+    margin-top: 25px;
+}
+
+.footer-distributed .footer-icons a {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    background-color: #3e3ec4;
+    border-radius: 2px;
+    font-size: 20px;
+    color: #ffffff;
+    text-align: center;
+    line-height: 35px;
+    margin-right: 3px;
+    margin-bottom: 5px;
+}
+
+.footer-distributed .footer-icons a:hover {
+    background-color: #5c5cda;
+}
+
+.footer-links a:hover {
+    color: #3e3ec4;
+}
